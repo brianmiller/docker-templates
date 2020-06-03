@@ -13,7 +13,7 @@
   <WebUI></WebUI>
   <TemplateURL>https://github.com/brianmiller/docker-templates/raw/master/intel-gpu-telegraf/intel-gpu-telegraf.xml</TemplateURL>
   <Icon>https://github.com/brianmiller/docker-templates/raw/master/intel-gpu-telegraf/intel_telegraf.png</Icon>
-  <ExtraParams></ExtraParams>
+  <ExtraParams>--device=/dev/dri</ExtraParams>
   <PostArgs/>
   <DateInstalled></DateInstalled>
   <DonateText/>
