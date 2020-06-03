@@ -35,7 +35,7 @@
   </Data>
   <Environment>
     <Variable>
-      <Value>http://<yourserver and port></Value>
+      <Value>http://yourserver and port</Value>
       <Name>InfluxDB URL</Name>
       <Mode/>
     </Variable>
