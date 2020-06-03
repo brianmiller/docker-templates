@@ -34,12 +34,12 @@
   <Environment>
     <Variable>
       <Value>http://yourserver and port</Value>
-      <Name>InfluxDB URL</Name>
+      <Name>influxdb_url</Name>
       <Mode/>
     </Variable>
     <Variable>
       <Value>telegraf</Value>
-      <Name>Telegraf database hosted within InfluxDB</Name>
+      <Name>telegraf_db</Name>
       <Mode/>
     </Variable>
   </Environment>
