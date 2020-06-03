@@ -1,1 +1,50 @@
-stub
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>intel-gpu-status</Name>
+  <Repository>theoriginalbrian/intel-gpu-status</Repository>
+  <Registry>https://hub.docker.com/repository/docker/theoriginalbrian/intel-gpu-status</Registry>
+  <Network>br0</Network>
+  <MyIP></MyIP>
+  <Privileged>true</Privileged>
+  <Support>brian@phospher.com</Support>
+  <Project/>
+  <Overview>Docker container running telegraf and polling Intel GPU stats. &#xD;</Overview>
+  <Category></Category>
+  <WebUI></WebUI>
+  <TemplateURL>https://github.com/brianmiller/docker-templates/raw/master/intel-gpu-status/intel-gpu-status.xml</TemplateURL>
+  <Icon>https://github.com/brianmiller/docker-templates/raw/master/intel-gpu-status/intel.png</Icon>
+  <ExtraParams></ExtraParams>
+  <PostArgs/>
+  <DateInstalled></DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <DonateImg/>
+  <MinVer>6.0</MinVer>
+  <Description>Docker container running telegraf and polling Intel GPU stats. &#xD;</Description>
+  <Networking>
+    <Mode>br0</Mode>
+    <Publish>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/intel-gpu-status/</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>http://<yourserver and port></Value>
+      <Name>InfluxDB URL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>telegraf</Value>
+      <Name>Telegraf database hosted within InfluxDB</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Config Name="influxdb_url" Target="influxdb_url" Default="http://localhost:8086" Mode="" Description="Container Variable: InfluxDB URL" Type="Variable" Display="always" Required="true" Mask="false">http://localhost:8086</Config>
+  <Config Name="config" Target="/config" Default="/mnt/cache/appdata/intel-gpu-status" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/cache/appdata/intel-gpu-status</Config>
+</Container>
