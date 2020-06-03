@@ -44,5 +44,6 @@
     </Variable>
   </Environment>
   <Config Name="influxdb_url" Target="influxdb_url" Default="http://localhost:8086" Mode="" Description="Container Variable: InfluxDB URL" Type="Variable" Display="always" Required="true" Mask="false">http://localhost:8086</Config>
+  <Config Name="telegraf_db" Target="telegraf_db" Default="telegraf" Mode="" Description="Container Variable: Telegraf database hosted within InfluxDB" Type="Variable" Display="always" Required="true" Mask="false">telegraf</Config>
   <Config Name="config" Target="/config" Default="/mnt/cache/appdata/intel-gpu-status" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/cache/appdata/intel-gpu-status</Config>
 </Container>
