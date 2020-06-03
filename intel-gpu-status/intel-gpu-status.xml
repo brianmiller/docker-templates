@@ -23,8 +23,6 @@
   <Description>Docker container running telegraf and polling Intel GPU stats. &#xD;</Description>
   <Networking>
     <Mode>br0</Mode>
-    <Publish>
-    </Publish>
   </Networking>
   <Data>
     <Volume>
