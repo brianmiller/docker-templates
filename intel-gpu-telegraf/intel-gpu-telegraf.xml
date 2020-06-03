@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>intel-gpu-status</Name>
-  <Repository>theoriginalbrian/intel-gpu-status</Repository>
-  <Registry>https://hub.docker.com/repository/docker/theoriginalbrian/intel-gpu-status</Registry>
+  <Name>intel-gpu-telegraf</Name>
+  <Repository>theoriginalbrian/intel-gpu-telegraf</Repository>
+  <Registry>https://hub.docker.com/repository/docker/theoriginalbrian/intel-gpu-telegraf</Registry>
   <Network>br0</Network>
   <MyIP></MyIP>
   <Privileged>true</Privileged>
@@ -11,8 +11,8 @@
   <Overview>Docker container running telegraf and polling Intel GPU stats. &#xD;</Overview>
   <Category></Category>
   <WebUI></WebUI>
-  <TemplateURL>https://github.com/brianmiller/docker-templates/raw/master/intel-gpu-status/intel-gpu-status.xml</TemplateURL>
-  <Icon>https://github.com/brianmiller/docker-templates/raw/master/intel-gpu-status/intel.png</Icon>
+  <TemplateURL>https://github.com/brianmiller/docker-templates/raw/master/intel-gpu-telegraf/intel-gpu-telegraf.xml</TemplateURL>
+  <Icon>https://github.com/brianmiller/docker-templates/raw/master/intel-gpu-telegraf/intel_telegraf.png</Icon>
   <ExtraParams></ExtraParams>
   <PostArgs/>
   <DateInstalled></DateInstalled>
@@ -26,14 +26,14 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/cache/appdata/intel-gpu-status/</HostDir>
+      <HostDir>/mnt/cache/appdata/intel-gpu-telegraf/</HostDir>
       <ContainerDir>/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
   <Environment>
     <Variable>
-      <Value>http://yourserver and port</Value>
+      <Value>http://yourserver:port</Value>
       <Name>influxdb_url</Name>
       <Mode/>
     </Variable>
@@ -42,8 +42,14 @@
       <Name>telegraf_db</Name>
       <Mode/>
     </Variable>
+    <Variable>
+      <Value>myhostname</Value>
+      <Name>telegraf_hostname</Name>
+      <Mode/>
+    </Variable>
   </Environment>
-  <Config Name="influxdb_url" Target="influxdb_url" Default="http://localhost:8086" Mode="" Description="Container Variable: InfluxDB URL" Type="Variable" Display="always" Required="true" Mask="false">http://localhost:8086</Config>
-  <Config Name="telegraf_db" Target="telegraf_db" Default="telegraf" Mode="" Description="Container Variable: Telegraf database hosted within InfluxDB" Type="Variable" Display="always" Required="true" Mask="false">telegraf</Config>
+  <Config Name="influxdb_url" Target="influxdb_url" Default="http://localhost:8086" Mode="" Description="Container Variable: This will set the outputs.influxdb URL in telegraf.conf" Type="Variable" Display="always" Required="true" Mask="false">http://localhost:8086</Config>
+  <Config Name="telegraf_db" Target="telegraf_db" Default="telegraf" Mode="" Description="Container Variable: This will set the database variable in telegraf.conf" Type="Variable" Display="always" Required="true" Mask="false">telegraf</Config>
+  <Config Name="telegraf_hostname" Target="telegraf_hostname" Default="myhostname" Mode="" Description="Container Variable: This will set the hostname variable in telegraf.conf" Type="Variable" Display="always" Required="true" Mask="false">telegraf</Config>
   <Config Name="config" Target="/config" Default="/mnt/cache/appdata/intel-gpu-status" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/cache/appdata/intel-gpu-status</Config>
 </Container>
