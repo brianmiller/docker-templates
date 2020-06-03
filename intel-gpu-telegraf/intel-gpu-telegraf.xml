@@ -24,13 +24,6 @@
   <Networking>
     <Mode>br0</Mode>
   </Networking>
-  <Data>
-    <Volume>
-      <HostDir>/mnt/cache/appdata/intel-gpu-telegraf/</HostDir>
-      <ContainerDir>/config</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-  </Data>
   <Environment>
     <Variable>
       <Value>http://yourserver:port</Value>
@@ -63,5 +56,4 @@
   <Config Name="influx_password" Target="influx_password" Default="" Mode="" Description="Container Variable: This will set the database password variable in telegraf.conf" Type="Variable" Display="always" Required="false" Mask="true"></Config>
   <Config Name="influx_skip_db_creation" Target="influx_skip_db_creation" Default="false" Mode="" Description="Container Variable: This will set the skip_database_creation variable in telegraf.conf" Type="Variable" Display="always" Required="true" Mask="false">false</Config>
   <Config Name="telegraf_hostname" Target="telegraf_hostname" Default="myhostname" Mode="" Description="Container Variable: This will set the hostname variable in telegraf.conf" Type="Variable" Display="always" Required="true" Mask="false">myhostname</Config>
-  <Config Name="config" Target="/config" Default="/mnt/cache/appdata/intel-gpu-telegraf" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/cache/appdata/intel-gpu-telegraf</Config>
 </Container>
