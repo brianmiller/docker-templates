@@ -6,7 +6,7 @@
   <Network>br0</Network>
   <MyIP></MyIP>
   <Privileged>true</Privileged>
-  <Support>brian@phospher.com</Support>
+  <Support>mailto:brian@phospher.com</Support>
   <Project/>
   <Overview>Docker container running telegraf and polling Intel GPU stats. &#xD;</Overview>
   <Category></Category>
