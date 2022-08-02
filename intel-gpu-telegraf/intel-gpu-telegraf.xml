@@ -2,11 +2,11 @@
 <Container version="2">
   <Name>intel-gpu-telegraf</Name>
   <Repository>theoriginalbrian/intel-gpu-telegraf</Repository>
-  <Registry>https://hub.docker.com/repository/docker/theoriginalbrian/intel-gpu-telegraf</Registry>
+  <Registry>https://hub.docker.com/r/theoriginalbrian/intel-gpu-telegraf</Registry>
   <Network>br0</Network>
   <MyIP></MyIP>
   <Privileged>true</Privileged>
-  <Support>brian@phospher.com</Support>
+  <Support>https://forums.unraid.net/topic/93302-support-intel-igpu-utilization-stats-into-influxdb-for-use-with-grafana-intel-gpu-telegfraf/</Support>
   <Project/>
   <Overview>Docker container running telegraf and polling Intel GPU stats. &#xD;</Overview>
   <Category></Category>
@@ -24,14 +24,12 @@
   <Networking>
     <Mode>br0</Mode>
   </Networking>
-  <Data>
-    <Volume>
-      <HostDir>/mnt/cache/appdata/intel-gpu-telegraf/</HostDir>
-      <ContainerDir>/config</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-  </Data>
   <Environment>
+    <Variable>
+      <Value>myhostname</Value>
+      <Name>telegraf_hostname</Name>
+      <Mode/>
+    </Variable>
     <Variable>
       <Value>http://yourserver:port</Value>
       <Name>influx_url</Name>
@@ -52,16 +50,10 @@
       <Name>influx_skip_db_creation</Name>
       <Mode/>
     </Variable>
-    <Variable>
-      <Value>myhostname</Value>
-      <Name>telegraf_hostname</Name>
-      <Mode/>
-    </Variable>
   </Environment>
+  <Config Name="telegraf_hostname" Target="telegraf_hostname" Default="myhostname" Mode="" Description="Container Variable: This will set the hostname variable in telegraf.conf" Type="Variable" Display="always" Required="true" Mask="false">myhostname</Config>
   <Config Name="influx_url" Target="influx_url" Default="http://localhost:8086" Mode="" Description="Container Variable: This will set the outputs.influxdb URL variable in telegraf.conf" Type="Variable" Display="always" Required="true" Mask="false">http://localhost:8086</Config>
   <Config Name="influx_db" Target="influx_db" Default="telegraf" Mode="" Description="Container Variable: This will set the database variable in telegraf.conf" Type="Variable" Display="always" Required="true" Mask="false">telegraf</Config>
   <Config Name="influx_password" Target="influx_password" Default="" Mode="" Description="Container Variable: This will set the database password variable in telegraf.conf" Type="Variable" Display="always" Required="false" Mask="true"></Config>
   <Config Name="influx_skip_db_creation" Target="influx_skip_db_creation" Default="false" Mode="" Description="Container Variable: This will set the skip_database_creation variable in telegraf.conf" Type="Variable" Display="always" Required="true" Mask="false">false</Config>
-  <Config Name="telegraf_hostname" Target="telegraf_hostname" Default="myhostname" Mode="" Description="Container Variable: This will set the hostname variable in telegraf.conf" Type="Variable" Display="always" Required="true" Mask="false">myhostname</Config>
-  <Config Name="config" Target="/config" Default="/mnt/cache/appdata/intel-gpu-telegraf" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/cache/appdata/intel-gpu-telegraf</Config>
 </Container>
