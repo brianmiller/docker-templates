@@ -40,7 +40,6 @@
        Description="This is a Web UI Port, and is used to access and configure your PhValheim Server." 
        Display="always" 
        Required="true">8080</Config>
-
 <Config
        Type="Port"
        Name="PhValheim Game Server Ports"
