@@ -3,7 +3,7 @@
   <Name>PhValheim Server</Name>
   <Repository>theoriginalbrian/phvalheim-server</Repository>
   <Registry>https://hub.docker.com/repository/docker/theoriginalbrian/phvalheim-server</Registry>
-  <Network>host</Network>
+  <Network>bridge</Network>
   <MyIP></MyIP>
   <Privileged>false</Privileged>
   <Support>brian@phospher.com</Support>
@@ -22,7 +22,7 @@
   <MinVer>6.0</MinVer>
   <Description>Docker container running all sorts of cool stuff. &#xD;</Description>
   <Networking>
-    <Mode>host</Mode>
+    <Mode>bridge</Mode>
   </Networking>
   <Data>
     <Volume>
@@ -44,11 +44,10 @@
 <Config
        Type="Port"
        Name="PhValheim Game Server Ports"
-       Target="4000-5000"
-       Default="4000-5000"
+       Target="4000"
+       Default="4000"
        Mode="udp"
        Description="Every Valheim world requires two UDP ports. We reserve a large block."
        Display="always"
-       Required="true">4000-5000</Config>
-
+       Required="true">4000</Config>
 </Container>
