@@ -40,7 +40,7 @@
       </Volume>
    </Data>
    <Config Type="Port" Name="PhValheim Web Sever Port" Target="8888" Default="8080" Mode="tcp" Description="This is a Web UI Port, and is used to access and configure your PhValheim Server." Display="always" Required="true">8080</Config>
-   <Config Type="Port" Name="PhValheim Game Server Ports" Target="25000-30000" Default="25000-30000" Mode="udp" Description="Every Valheim world requires two UDP ports. We reserve a large block." Display="always" Required="true">25000-30000</Config>
+   <Config Type="Port" Name="PhValheim Game Server Ports" Target="25000-26000" Default="25000-26000" Mode="udp" Description="Every Valheim world requires two UDP ports. We reserve a large block." Display="always" Required="true">25000-26000</Config>
    <Config Type="Path" Name="Stateful Data Path" Target="/opt/stateful" Default="/mnt/user/appdata/phvalheim-server" Mode="rw" Description="Internal Container Path: /opt/stateful" Display="always" Required="true" Mask="false">/mnt/user/appdata/phvalheim-server</Config>
    <Config Type="Path" Name="Stateful Data Path for backups" Target="/opt/stateful/backups" Default="/mnt/user/appdata/phvalheim-server/backups" Mode="rw" Description="Internal Container Path for backups: /opt/stateful/backups" Display="always" Required="true" Mask="false">/mnt/user/appdata/phvalheim-server/backups</Config>
 </Container>
