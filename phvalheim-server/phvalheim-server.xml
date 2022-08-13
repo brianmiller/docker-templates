@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Container version="2">
-   <Version>0.0.4</Version>  
+   <Version>0.0.5</Version>  
    <Name>PhValheim Server</Name>
    <Repository>theoriginalbrian/phvalheim-server</Repository>
    <Registry>https://hub.docker.com/repository/docker/theoriginalbrian/phvalheim-server</Registry>
@@ -25,8 +25,6 @@
    <Networking>
       <Mode>bridge</Mode>
    </Networking>
-   <Environment>
-   </Environment>
    <Data>
       <Volume>
          <HostDir>/mnt/cache/appdata/phvalheim-server</HostDir>
