@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+   <Name>Roboexec</Name>
+   <Repository>theoriginalbrian/roboexec</Repository>
+   <Registry>https://hub.docker.com/repository/docker/theoriginalbrian/roboexec</Registry>
+   <Network>bridge</Network>
+   <MyIP />
+   <Privileged>false</Privileged>
+   <Support>brian@phospher.com</Support>
+   <Project />
+   <Overview>ACTIVE DEVELOPMENT. DO NOT USE.</Overview>
+   <Category />
+   <WebUI />
+   <TemplateURL>https://github.com/brianmiller/docker-templates/raw/master/roboexec/roboexec.xml</TemplateURL>
+   <Icon>https://github.com/brianmiller/docker-templates/raw/master/roboexec/roboexec.png</Icon>
+   <ExtraParams />
+   <PostArgs />
+   <DateInstalled />
+   <DonateText />
+   <DonateLink />
+   <DonateImg />
+   <MinVer>6.0</MinVer>
+   <Description>Cron, at it's finest.</Description>
+   <Networking>
+      <Mode>bridge</Mode>
+   </Networking>
+   <Data>
+      <Volume>
+	 <HostDir>/mnt/cache/appdata/roboexec</HostDir>
+	 <ContainerDir>/opt/stateful</ContainerDir>
+         <Mode>rw</Mode>
+      </Volume>
+   </Data>
+   <Config Type="Path" Name="Stateful data path" Target="/opt/stateful" Default="/mnt/user/appdata/roboexec" Mode="rw" Description="Internal Container Path: /opt/stateful" Display="always" Required="true" Mask="false">/mnt/user/appdata/roboexec</Config>
+</Container>
