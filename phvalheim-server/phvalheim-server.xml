@@ -56,18 +56,8 @@
       <Mode/>
     </Variable>
     <Variable>
-      <Value>false</Value>
-      <Name>googleAuthEnabled</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>YOURCLIENTID.apps.googleusercontent.com</Value>
-      <Name>googleClientId</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>true</Value>
-      <Name>googleAutoLogin</Name>
+      <Value></Value>
+      <Name>steamAPIKey</Name>
       <Mode/>
     </Variable>
    </Environment>
@@ -87,9 +77,7 @@
    </Data>
    <Config Type="Variable" Name="phvalheimHost" Target="phvalheimHost" Default="" Mode="" Description="This is the FQDN hostname clients use to connect to PhValheim's server." Display="always" Required="true" Mask="false"></Config>
    <Config Type="Variable" Name="gameDNS" Target="gameDNS" Default="" Mode="" Description="This is the FQDN hostname clients use to connect to Valheim worlds." Display="always" Required="true" Mask="false"></Config>
-   <Config Type="Variable" Name="googleAuthEnabled" Target="googleAuthEnabled" Default="false" Mode="" Description="This will enable Google One-Tap authentication. googleClientId and googleAuthLogin are required." Display="always" Required="false" Mask="false">false</Config>
-   <Config Type="Variable" Name="googleClientId" Target="googleClientId" Default="YOURCLIENTID.apps.googleusercontent.com" Mode="" Description="If googleAuthEnabled=true, provide your Google Client ID for this app (see console.cloud.google.com)." Display="always" Required="false" Mask="false">YOURCLIENTID.apps.googleusercontent.com</Config>
-   <Config Type="Variable" Name="googleAutoLogin" Target="googleAutoLogin" Default="true" Mode="" Description="If googleAuthEnabled=true, automatically login to PhValheim if the user is logged into their browser with their Google ID." Display="always" Required="false" Mask="false">true</Config>
+   <Config Type="Variable" Name="steamAPIKey" Target="steamAPIKey" Default="" Mode="" Description="Your Steam API Key. This is used for Steam Username/ID validation and world authorization." Display="always" Required="true" Mask="false"></Config>
    <Config Type="Variable" Name="backupsToKeep" Target="backupsToKeep" Default="10" Mode="" Description="The number of backups to keep per world." Display="always" Required="true" Mask="false">10</Config>
    <Config Type="Variable" Name="defaultSeed" Target="defaultSeed" Default="szN8qp2lBn" Mode="" Description="The default Valheim seed used when one isn't specified." Display="always" Required="true" Mask="false">szN8qp2lBn</Config>
    <Config Type="Variable" Name="phvalheimClientURL" Target="phvalheimClientURL" Default="https://github.com/brianmiller/phvalheim-client/raw/master/published_build/phvalheim-client-installer.exe" Mode="" Description="The hosted location your clients will download the PhValheim Client from." Display="hidden" Required="true" Mask="false">https://github.com/brianmiller/phvalheim-client/raw/master/published_build/phvalheim-client-installer.exe</Config>
