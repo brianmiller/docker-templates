@@ -2,13 +2,14 @@
 <Container version="2">
    <Name>PhValheim Server</Name>
    <Repository>theoriginalbrian/phvalheim-server</Repository>
-   <Registry>https://hub.docker.com/repository/docker/theoriginalbrian/phvalheim-server</Registry>
+   <Registry>https://hub.docker.com/r/theoriginalbrian/phvalheim-server</Registry>
    <Network>bridge</Network>
    <MyIP />
    <Privileged>false</Privileged>
-   <Support>brian@phospher.com</Support>
-   <Project />
-   <Overview>ACTIVE DEVELOPMENT. DO NOT USE.</Overview>
+   <Shell>bash</Shell>
+   <Support>https://github.com/brianmiller/phvalheim-server/issues</Support>
+   <Project>https://github.com/brianmiller/phvalheim-server</Project>
+   <Overview>An over-engineered approach to Valheim server+client world+mods management</Overview>
    <Category />
    <WebUI />
    <TemplateURL>https://github.com/brianmiller/docker-templates/raw/master/phvalheim-server/phvalheim-server.xml</TemplateURL>
@@ -20,7 +21,7 @@
    <DonateLink />
    <DonateImg />
    <MinVer>6.0</MinVer>
-   <Description>Docker container running all sorts of cool stuff.</Description>
+   <Description>Docker container running all sorts of cool stuff for Valheim.</Description>
    <Networking>
       <Mode>bridge</Mode>
    </Networking>
