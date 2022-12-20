@@ -16,7 +16,6 @@
    <Icon>https://github.com/brianmiller/docker-templates/raw/master/phvalheim-server/phvalheim-server.png</Icon>
    <ExtraParams />
    <PostArgs />
-   <DateInstalled />
    <DonateText />
    <DonateLink />
    <DonateImg />
