@@ -11,7 +11,7 @@
    <Project>https://github.com/brianmiller/phvalheim-server</Project>
    <Overview>An over-engineered approach to Valheim server+client world+mods management</Overview>
    <Category>Other: GameServers:</Category>
-   <WebUI></WebUI>
+   <WebUI>http://[IP]:[PORT:8081]</WebUI>
    <TemplateURL>https://github.com/brianmiller/docker-templates/raw/master/phvalheim-server/phvalheim-server.xml</TemplateURL>
    <Icon>https://github.com/brianmiller/docker-templates/raw/master/phvalheim-server/phvalheim-server.png</Icon>
    <ExtraParams/>
@@ -22,7 +22,23 @@
    <MinVer>6.0</MinVer>
    <Description>Docker container running all sorts of cool stuff for Valheim.</Description>
    <Networking>
-      <Mode>bridge</Mode>
+    <Mode>bridge</Mode>
+     <Publish>
+      <Port>
+       <HostPort>8080</HostPort>
+       <ContainerPort>8080</ContainerPort>
+       <Protocol>tcp</Protocol>
+      </Port>
+       <HostPort>8081</HostPort>
+       <ContainerPort>8081</ContainerPort>
+       <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+       <HostPort>25000-26000</HostPort>
+       <ContainerPort>25000-26000</ContainerPort>
+       <Protocol>udp</Protocol>
+      </Port>
+    </Publish>
    </Networking>
    <Environment>
     <Variable>
