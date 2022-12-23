@@ -29,6 +29,7 @@
        <ContainerPort>8080</ContainerPort>
        <Protocol>tcp</Protocol>
       </Port>
+      <Port>
        <HostPort>8081</HostPort>
        <ContainerPort>8081</ContainerPort>
        <Protocol>tcp</Protocol>
