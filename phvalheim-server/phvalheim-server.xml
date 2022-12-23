@@ -34,11 +34,6 @@
          <ContainerPort>8081</ContainerPort>
          <Protocol>tcp</Protocol>
        </Port>
-       <Port>
-         <HostPort>25000-26000</HostPort>
-         <ContainerPort>25000-26000</ContainerPort>
-         <Protocol>udp</Protocol>
-       </Port>
      </Publish>
    </Networking>
    <Environment>
