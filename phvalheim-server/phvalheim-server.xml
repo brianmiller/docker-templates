@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-   <Name>phvalheim-server</Name>
+   <Name>PhValheim-Server</Name>
    <Repository>theoriginalbrian/phvalheim-server</Repository>
    <Registry>https://hub.docker.com/r/theoriginalbrian/phvalheim-server</Registry>
    <Network>bridge</Network>
