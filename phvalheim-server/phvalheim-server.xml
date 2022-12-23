@@ -22,24 +22,24 @@
    <MinVer>6.0</MinVer>
    <Description>Docker container running all sorts of cool stuff for Valheim.</Description>
    <Networking>
-    <Mode>bridge</Mode>
-    <Publish>
-     <Port>
-      <HostPort>8080</HostPort>
-      <ContainerPort>8080</ContainerPort>
-      <Protocol>tcp</Protocol>
-     </Port>
-     <Port>
-      <HostPort>8081</HostPort>
-      <ContainerPort>8081</ContainerPort>
-      <Protocol>tcp</Protocol>
-     </Port>
-     <Port>
-      <HostPort>25000-26000</HostPort>
-      <ContainerPort>25000-26000</ContainerPort>
-      <Protocol>udp</Protocol>
-     </Port>
-    </Publish>
+     <Mode>bridge</Mode>
+     <Publish>
+      <Port>
+       <HostPort>8080</HostPort>
+       <ContainerPort>8080</ContainerPort>
+       <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+       <HostPort>8081</HostPort>
+       <ContainerPort>8081</ContainerPort>
+       <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+       <HostPort>25000-26000</HostPort>
+       <ContainerPort>25000-26000</ContainerPort>
+       <Protocol>udp</Protocol>
+      </Port>
+     </Publish>
    </Networking>
    <Environment>
     <Variable>
