@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <Container version="2">
    <Name>mbbsemu</Name>
-   <Repository>mbbsemu</Repository>
-   <Registry>registry.phospher.com</Registry>
+   <Repository>registry.phospher.com/mbbsemu</Repository>
+   <Registry></Registry>
    <Network>bridge</Network>
    <MyIP></MyIP>
    <Privileged>false</Privileged>
