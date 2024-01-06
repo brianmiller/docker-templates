@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<Container version="2">
+   <Name>mbbsemu</Name>
+   <Repository>mbbsemu</Repository>
+   <Registry>https://registry.phospher.com</Registry>
+   <Network>bridge</Network>
+   <MyIP></MyIP>
+   <Privileged>false</Privileged>
+   <Shell>bash</Shell>
+   <Support>https://discord.gg/8RMMrJVQgy</Support>
+   <Project>https://gitlab.phospher.com/brianmiller/mbbsemu</Project>
+   <Overview>The Major BBS Emulator: MBBSEmu.com</Overview>
+   <Category>Other:</Category>
+   <WebUI></WebUI>
+   <TemplateURL>https://github.com/brianmiller/docker-templates/raw/master/mbbsemu/mbbsemu.xml</TemplateURL>
+   <Icon>https://github.com/brianmiller/docker-templates/raw/master/mbbsemu/mbbsemu.png</Icon>
+   <ExtraParams/>
+   <PostArgs/>
+   <DonateText/>
+   <DonateLink/>
+   <DonateImg/>
+   <MinVer>6.0</MinVer>
+   <Description></Description>
+   <Networking>
+     <Mode>bridge</Mode>
+   </Networking>
+   <Environment>
+    <Variable>
+      <Value>v1.0-alpha-123023</Value>
+      <Name>MBBSEMU_RELEASE_TAG</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>mbbsemu</Value>
+      <Name>INITIAL_SYSOP_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+   </Environment>
+   <Data>
+      <Volume>
+         <HostDir>/mnt/user/appdata/mbbsemu</HostDir>
+         <ContainerDir>/opt/mbbsemu</ContainerDir>
+         <Mode>rw</Mode>
+      </Volume>
+   </Data>
+   <Config Type="Variable" Name="MBBSEMU_RELEASE_TAG" Target="MBBSEMU_RELEASE_TAG" Default="v1.0-alpha-123023" Mode="" Description="The version of MBBSEmu to download from GitHub. Use 'embedded' to use the pre-packaged version." Display="always" Required="true" Mask="false"></Config>
+   <Config Type="Variable" Name="INITIAL_SYSOP_PASSWORD" Target="INITIAL_SYSOP_PASSWORD" Default="mbbsemu" Mode="" Description="The initial sysop password. This is only used if an existing installation isn't found." Display="always" Required="true" Mask="false"></Config>
+   <Config Type="Port" Name="Telnet Port" Target="23" Default="23" Mode="tcp" Description="The port mbbsemu will listen on." Display="always" Required="true">23</Config>
+   <Config Type="Path" Name="Stateful Data Path" Target="/opt/mbbsemu" Default="/mnt/user/appdata/mbbsemu" Mode="rw" Description="Internal Container Path: /opt/mbbsemu" Display="always" Required="true" Mask="false">/mnt/user/appdata/mbbsemu</Config>
+</Container>
