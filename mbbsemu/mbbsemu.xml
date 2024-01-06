@@ -20,7 +20,7 @@
    <DonateLink/>
    <DonateImg/>
    <MinVer>6.0</MinVer>
-   <Description></Description>
+   <Description>This container comes preloaded with a colorized version Crossroads of the Elements and Legend of the Red Dragon (L.O.R.D.).</Description>
    <Networking>
      <Mode>bridge</Mode>
    </Networking>
