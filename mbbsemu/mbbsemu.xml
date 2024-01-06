@@ -2,7 +2,7 @@
 <Container version="2">
    <Name>mbbsemu</Name>
    <Repository>mbbsemu</Repository>
-   <Registry>https://registry.phospher.com</Registry>
+   <Registry>registry.phospher.com</Registry>
    <Network>bridge</Network>
    <MyIP></MyIP>
    <Privileged>false</Privileged>
