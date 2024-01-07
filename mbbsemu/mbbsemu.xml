@@ -2,7 +2,7 @@
 <Container version="2">
    <Name>mbbsemu</Name>
    <Repository>registry.phospher.com/mbbsemu:latest</Repository>
-   <Registry></Registry>
+   <Registry>https://registry.phospher.com/v2/mbbsemu/tags/list</Registry>
    <Network>bridge</Network>
    <MyIP></MyIP>
    <Privileged>false</Privileged>
