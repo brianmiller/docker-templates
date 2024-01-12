@@ -35,6 +35,16 @@
       <Name>INITIAL_SYSOP_PASSWORD</Name>
       <Mode/>
     </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>ABUSEIPDB_API_KEY</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>50</Value>
+      <Name>ABUSEIPDB_THRESHOLD</Name>
+      <Mode/>
+    </Variable>
    </Environment>
    <Data>
       <Volume>
@@ -45,6 +55,8 @@
    </Data>
    <Config Type="Variable" Name="MBBSEMU_RELEASE_TAG" Target="MBBSEMU_RELEASE_TAG" Default="v1.0-alpha-123023" Mode="" Description="The version of MBBSEmu to download from GitHub. Use 'embedded' to use the pre-packaged version." Display="always" Required="true" Mask="false"></Config>
    <Config Type="Variable" Name="INITIAL_SYSOP_PASSWORD" Target="INITIAL_SYSOP_PASSWORD" Default="mbbsemu" Mode="" Description="The initial sysop password. This is only used if an existing installation isn't found." Display="always" Required="true" Mask="false"></Config>
+   <Config Type="Variable" Name="ABUSEIPDB_API_KEY" Target="ABUSEIPDB_API_KEY" Default="" Mode="" Description="Optional: Abuseipdb.com API key. Provide your free abuseipdb.com key to automatically perform a reputation check on every IP connecting to MBBSEmu." Display="always" Required="true" Mask="false"></Config>
+   <Config Type="Variable" Name="ABUSEIPDB_THRESHOLD" Target="ABUSEIPDB_TRESHOLD" Default="50" Mode="" Description="If a connected client IP returns with an abuse score that meets or exceeds this value, the IP will be blocked." Display="always" Required="true" Mask="false"></Config>
    <Config Type="Port" Name="Telnet Port" Target="23" Default="23" Mode="tcp" Description="The port mbbsemu will listen on." Display="always" Required="true">23</Config>
    <Config Type="Path" Name="Stateful Data Path" Target="/opt/mbbsemu" Default="/mnt/user/appdata/mbbsemu" Mode="rw" Description="Internal Container Path: /opt/mbbsemu" Display="always" Required="true" Mask="false">/mnt/user/appdata/mbbsemu</Config>
 </Container>
