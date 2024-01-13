@@ -14,7 +14,7 @@
    <WebUI></WebUI>
    <TemplateURL>https://github.com/brianmiller/docker-templates/raw/master/mbbsemu/mbbsemu.xml</TemplateURL>
    <Icon>https://github.com/brianmiller/docker-templates/raw/master/mbbsemu/mbbsemu.png</Icon>
-   <ExtraParams>--cap-add NET_ADMIN<ExtraParams/>
+   <ExtraParams>--cap-add NET_ADMIN</ExtraParams>
    <PostArgs/>
    <DonateText/>
    <DonateLink/>
