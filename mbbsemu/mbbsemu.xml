@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <Container version="2">
    <Name>mbbsemu</Name>
-   <Repository>registry.phospher.com/mbbsemu:latest</Repository>
-   <Registry>https://registry.phospher.com/v2/mbbsemu/tags/list</Registry>
+   <Repository>gitlab-registry.phospher.com:5050/brianmiller/mbbsemu:latest</Repository>
+   <Registry>https://gitlab.phospher.com/brianmiller/mbbsemu/container_registry/1</Registry>
    <Network>bridge</Network>
    <MyIP></MyIP>
    <Privileged>false</Privileged>
