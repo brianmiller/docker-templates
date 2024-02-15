@@ -9,7 +9,8 @@
    <Shell>bash</Shell>
    <Support>https://discord.gg/8RMMrJVQgy</Support>
    <Project>https://gitlab.phospher.com/brianmiller/mbbsemu</Project>
-   <Overview>The Major BBS Emulator: MBBSEmu.com: This container comes preloaded with a colorized version Crossroads of the Elements and Legend of the Red Dragon (L.O.R.D.).</Overview>
+   <Overview>The Major BBS Emulator: MBBSEmu.com: This container comes preloaded with a colorized version Crossroads of the Elements and Legend of the Red Dragon (L.O.R.D.).&#xD;
+AbuseIPDB support has been added to combat the dirty tpc/23 scanners. You may not need this if you choose a non-standard port.</Overview>
    <Category>Other:</Category>
    <WebUI></WebUI>
    <TemplateURL>https://github.com/brianmiller/docker-templates/raw/master/mbbsemu/mbbsemu.xml</TemplateURL>
