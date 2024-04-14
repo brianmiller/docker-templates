@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<Container version="2">
+   <Name>doorway</Name>
+   <Repository>registry.phospher.com/brianmiller/doorway:latest</Repository>
+   <Registry>https://gitlab.phospher.com/brianmiller/doorway/container_registry/5</Registry>
+   <Network>bridge</Network>
+   <MyIP></MyIP>
+   <Privileged>false</Privileged>
+   <Shell>bash</Shell>
+   <Support>https://discord.gg/8RMMrJVQgy</Support>
+   <Project>https://gitlab.phospher.com/brianmiller/doorway</Project>
+   <Overview>Doorway is a complete RLOGIN and Telnet BBS made for the old multiuser DOS door games. It comes preloaded with the last published version of L.O.R.D., L.O.R.D. 2, Exitilus (the reason I built this container), Planets, Death Masters, DoorMud, Drakeville and MELEE. This container can be use standalone but it's intended to be an RLOGIN target for a main BBS.&#xD;
+&#xD;
+Most door games are configured for up to 10 simultaneous nodes.&#xD;
+&#xD;
+   </Overview>
+   <Category>Other:</Category>
+   <WebUI></WebUI>
+   <TemplateURL>https://github.com/brianmiller/docker-templates/raw/master/doorway/doorway.xml</TemplateURL>
+   <Icon>https://github.com/brianmiller/docker-templates/raw/master/doorway/doorway.png</Icon>
+   <ExtraParams></ExtraParams>
+   <PostArgs/>
+   <DonateText/>
+   <DonateLink/>
+   <DonateImg/>
+   <MinVer>6.0</MinVer>
+   <Description></Description>
+   <Networking>
+     <Mode>bridge</Mode>
+   </Networking>
+   <Environment>
+   </Environment>
+   <Data>
+      <Volume>
+         <HostDir>/mnt/user/appdata/doorway</HostDir>
+         <ContainerDir>/opt/doorway</ContainerDir>
+         <Mode>rw</Mode>
+      </Volume>
+   </Data>
+   <Config Type="Port" Name="Telnet Port" Target="23" Default="23" Mode="tcp" Description="The telnet port doorway will listen on." Display="always" Required="true">23</Config>
+   <Config Type="Port" Name="Rlogin Port" Target="513" Default="513" Mode="tcp" Description="The rlogin port doorway will listen on." Display="always" Required="true">513</Config>
+   <Config Type="Path" Name="Stateful Data Path" Target="/opt/doorway" Default="/mnt/user/appdata/doorway" Mode="rw" Description="Internal Container Path: /opt/doorway" Display="always" Required="true" Mask="false">/mnt/user/appdata/doorway</Config>
+</Container>
