@@ -28,11 +28,6 @@ AbuseIPDB support has been added to combat the dirty tpc/23 scanners. You may no
    </Networking>
    <Environment>
     <Variable>
-      <Value>v1.0-alpha-123023</Value>
-      <Name>MBBSEMU_RELEASE_TAG</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
       <Value>mbbsemu</Value>
       <Name>INITIAL_SYSOP_PASSWORD</Name>
       <Mode/>
@@ -55,7 +50,6 @@ AbuseIPDB support has been added to combat the dirty tpc/23 scanners. You may no
          <Mode>rw</Mode>
       </Volume>
    </Data>
-   <Config Type="Variable" Name="MBBSEMU_RELEASE_TAG" Target="MBBSEMU_RELEASE_TAG" Default="v1.0-alpha-123023" Mode="" Description="The version of MBBSEmu to download from GitHub. Use 'embedded' to use the pre-packaged version." Display="always" Required="true" Mask="false"></Config>
    <Config Type="Variable" Name="INITIAL_SYSOP_PASSWORD" Target="INITIAL_SYSOP_PASSWORD" Default="mbbsemu" Mode="" Description="The initial sysop password. This is only used if an existing installation isn't found." Display="always" Required="true" Mask="false"></Config>
    <Config Type="Variable" Name="ABUSEIPDB_API_KEY" Target="ABUSEIPDB_API_KEY" Default="" Mode="" Description="Optional: Abuseipdb.com API key. Provide your free abuseipdb.com key to automatically perform a reputation check on every IP connecting to MBBSEmu. Note: '--cap-add NET_ADMIN' mode (enabled by default) is required for this to work. See extra paramaters in advanced settings to disable." Display="always" Required="false" Mask="false"></Config>
    <Config Type="Variable" Name="ABUSEIPDB_THRESHOLD" Target="ABUSEIPDB_TRESHOLD" Default="1" Mode="" Description="If a connected client IP returns with an abuse report count that meets or exceeds this value, the IP will be blocked." Display="always" Required="false" Mask="false"></Config>
