@@ -60,6 +60,26 @@
       <Name>steamAPIKey</Name>
       <Mode/>
     </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>geminiApiKey</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>claudeApiKey</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>openaiApiKey</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>ollamaUrl</Name>
+      <Mode/>
+    </Variable>
    </Environment>
    <Data>
       <Volume>
@@ -78,6 +98,10 @@
    <Config Type="Variable" Name="phvalheimHost" Target="phvalheimHost" Default="" Mode="" Description="This is the FQDN hostname clients use to connect to PhValheim's server." Display="always" Required="true" Mask="false"></Config>
    <Config Type="Variable" Name="gameDNS" Target="gameDNS" Default="" Mode="" Description="This is the FQDN hostname clients use to connect to Valheim worlds." Display="always" Required="true" Mask="false"></Config>
    <Config Type="Variable" Name="steamAPIKey" Target="steamAPIKey" Default="" Mode="" Description="Your Steam API Key. This is used for Steam Username/ID validation and world authorization." Display="always" Required="true" Mask="false"></Config>
+   <Config Type="Variable" Name="geminiApiKey" Target="geminiApiKey" Default="" Mode="" Description="Google Gemini API Key. This is used for AI log analysis (optional)." Display="always" Required="false" Mask="false"></Config>
+   <Config Type="Variable" Name="claudeApiKey" Target="claudeApiKey" Default="" Mode="" Description="Anthropic Claude API Key. This is used for AI log analysis (optional)." Display="always" Required="false" Mask="false"></Config>
+   <Config Type="Variable" Name="openaiApiKey" Target="openaiApiKey" Default="" Mode="" Description="OpenAI API Key. This is used for AI log analysis (optional)." Display="always" Required="false" Mask="false"></Config>
+   <Config Type="Variable" Name="ollamaUrl" Target="ollamaUrl" Default="" Mode="" Description="Ollama URL. This is used for AI log analysis (optional)." Display="always" Required="false" Mask="false"></Config>
    <Config Type="Variable" Name="backupsToKeep" Target="backupsToKeep" Default="10" Mode="" Description="The number of backups to keep per world." Display="always" Required="true" Mask="false">10</Config>
    <Config Type="Variable" Name="defaultSeed" Target="defaultSeed" Default="szN8qp2lBn" Mode="" Description="The default Valheim seed used when one isn't specified." Display="always" Required="true" Mask="false">szN8qp2lBn</Config>
    <Config Type="Variable" Name="phvalheimClientURL" Target="phvalheimClientURL" Default="https://github.com/brianmiller/phvalheim-client/raw/master/published_build/phvalheim-client-installer.exe" Mode="" Description="The hosted location your clients will download the PhValheim Client from." Display="hidden" Required="true" Mask="false">https://github.com/brianmiller/phvalheim-client/raw/master/published_build/phvalheim-client-installer.exe</Config>
