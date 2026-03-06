@@ -21,24 +21,6 @@
    <DonateImg/>
    <MinVer>6.0</MinVer>
    <Description>Docker container running all sorts of cool stuff for Valheim.</Description>
-   <Networking>
-     <Mode>bridge</Mode>
-   </Networking>
-   </Environment>
-   <Data>
-      <Volume>
-         <HostDir>/mnt/cache/appdata/phvalheim-server</HostDir>
-         <ContainerDir>/opt/stateful</ContainerDir>
-         <Mode>rw</Mode>
-      </Volume>
-   </Data>
-   <Data>
-      <Volume>
-	 <HostDir>/mnt/cache/appdata/phvalheim-server/backups</HostDir>
-	 <ContainerDir>/opt/stateful/backups</ContainerDir>
-         <Mode>rw</Mode>
-      </Volume>
-   </Data>
    <Config Type="Port" Name="PhValheim Public Web Sever Port" Target="8080" Default="8080" Mode="tcp" Description="This is the public port PhValheim Server listens on." Display="always" Required="true">8080</Config>
    <Config Type="Port" Name="PhValheim Admin Web Sever Port" Target="8081" Default="8081" Mode="tcp" Description="This is the admin port PhValheim admin interfaces listen on." Display="always" Required="true">8081</Config>
    <Config Type="Port" Name="PhValheim Game Server Ports" Target="25000-25100" Default="25000-25100" Mode="udp" Description="Every Valheim world requires two UDP ports. We reserve a large block." Display="hidden" Required="true">25000-25100</Config>
